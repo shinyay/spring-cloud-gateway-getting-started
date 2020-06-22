@@ -12,6 +12,18 @@ Spring Cloud Gateway is an intelligent proxy service, which ransparently central
 |**Predicate**|HTTP Request Matching<BR>`Java 8 Function Predicate`<BR>Used for followings<BR>- Header <BR>- Method <BR>- Parameter|
 |**Filter**|`Spring WebFilter`<BR>Modification of the incoming HTTP request or outgoing HTTP response|
 
+### Route
+
+The following description is a basic routing function. First of all we generate `RouteLocator` Bean which includes routing configuration.
+
+```kotlin
+@Bean
+fun myRoutes(builder: RouteLocatorBuilder): RouteLocator? = builder.routes()
+        .route {  }
+        .route {  }
+        .build()
+```
+
 ## Demo
 
 ## Features
