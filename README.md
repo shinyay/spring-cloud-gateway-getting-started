@@ -1,8 +1,9 @@
-# Name
+# Spring Cloud Gateway Getting Started
 
-Overview
+Spring Cloud Gateway is an intelligent proxy service, which ransparently centralizes requests in a single entry point and routes them to the proper service.
 
 ## Description
+
 
 ## Demo
 
