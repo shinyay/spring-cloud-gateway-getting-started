@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Bean
 class SpringCloudGatewayGsApplication {
 
 	@Bean
-	fun routeLocator(builder: RouteLocatorBuilder): RouteLocator? = builder.routes()
+	fun myRoutes(builder: RouteLocatorBuilder): RouteLocator? = builder.routes()
 			.route { r -> r.path("/search")
 					.uri("https://www.google.co.jp") }
 			.route { r -> r.path("/get")
