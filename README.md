@@ -24,6 +24,14 @@ fun myRoutes(builder: RouteLocatorBuilder): RouteLocator? = builder.routes()
         .build()
 ```
 
+#### Destination (URI)
+
+```kotlin
+fun myRoutes(builder: RouteLocatorBuilder): RouteLocator? = builder.routes()
+			.route { r -> r.path("/search").uri("https://www.google.co.jp") }
+			.build()
+```
+
 ## Demo
 
 ## Features
