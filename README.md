@@ -4,6 +4,13 @@ Spring Cloud Gateway is an intelligent proxy service, which ransparently central
 
 ## Description
 
+### Building Block for Gateway
+
+|Name|Description|
+|----|-----------|
+|**Route**|Primary API of the Gateway<BR>Defined by followings<BR>- ID<BR>- Destination(URI)<BR>- Set of Predicates and Fileters|
+|**Predicate**|HTTP Request Matching<BR>`Java 8 Function Predicate`<BR>Used for followings<BR>- Header <BR>- Method <BR>- Parameter|
+|**Filter**|`Spring WebFilter`<BR>Modification of the incoming HTTP request or outgoing HTTP response|
 
 ## Demo
 
