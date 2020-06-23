@@ -45,6 +45,10 @@ fun myRoutes(builder: RouteLocatorBuilder): RouteLocator? = builder.routes()
         .build()
 ```
 
+### Filter
+**Filter** allows you to modify requests and responses before or after sending the downstream request.
+
+
 ## Demo
 
 ## Features
