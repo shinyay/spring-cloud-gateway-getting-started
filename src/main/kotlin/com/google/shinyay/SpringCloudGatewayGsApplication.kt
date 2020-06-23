@@ -18,7 +18,13 @@ class SpringCloudGatewayGsApplication {
 					.uri("https://www.google.co.jp") }
 			.route { r -> r.host("localhost:8080")
 					.and()
-					.before(ZonedDateTime.of(2020,6,1,0,0,0,0, ZoneId.systemDefault()))
+					.before(ZonedDateTime.of(2020,7,1,0,0,0,0, ZoneId.systemDefault()))
+					.and()
+					.weight("group1", 5)
+					.uri("https://www.google.com") }
+			.route { r -> r.host("localhost:8080")
+					.and()
+					.weight("group1", 5)
 					.uri("https://www.google.co.jp") }
 			.route { r -> r.host("localhost:8080")
 					.and()
