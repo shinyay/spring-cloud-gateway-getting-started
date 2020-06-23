@@ -32,6 +32,19 @@ fun myRoutes(builder: RouteLocatorBuilder): RouteLocator? = builder.routes()
 			.build()
 ```
 
+### Predicate
+**Predicate** lets you match on anything from the HTTP request, such as headers or parameters.
+
+#### Method Route Predicate Factory
+
+The following route matches if the request was a `GET`.
+
+```kotlin
+fun myRoutes(builder: RouteLocatorBuilder): RouteLocator? = builder.routes()
+        .route { r -> r.path("/get").and().method(HttpMethod.GET) }
+        .build()
+```
+
 ## Demo
 
 ## Features
