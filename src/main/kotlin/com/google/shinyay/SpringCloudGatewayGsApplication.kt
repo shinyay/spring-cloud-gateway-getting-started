@@ -16,11 +16,13 @@ class SpringCloudGatewayGsApplication {
 	fun myRoutes(builder: RouteLocatorBuilder): RouteLocator? = builder.routes()
 			.route { r -> r.path("/search")
 					.uri("https://www.google.co.jp") }
-			.route { r -> r.path("/may")
+			.route { r -> r.host("localhost:8080")
 					.and()
 					.before(ZonedDateTime.of(2020,6,1,0,0,0,0, ZoneId.systemDefault()))
 					.uri("https://www.google.co.jp") }
-			.route { r -> r.path("/june")
+			.route { r -> r.host("localhost:8080")
+					.and()
+					.path("/doodles")
 					.and()
 					.between(
 							ZonedDateTime.of(2020,6,1,0,0,0,0, ZoneId.systemDefault()),
