@@ -24,8 +24,7 @@ class SpringCloudGatewayGsApplication {
 					.uri("https://www.google.com") }
 			.route { r -> r.host("localhost:8080")
 					.and()
-					.weight("group1", 5)
-					.uri("https://www.google.co.jp") }
+					.weight("group1", 5).uri("https://www.google.co.jp") }
 			.route { r -> r.host("localhost:8080")
 					.and()
 					.path("/doodles")

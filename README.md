@@ -48,6 +48,117 @@ fun myRoutes(builder: RouteLocatorBuilder): RouteLocator? = builder.routes()
 ### Filter
 **Filter** allows you to modify requests and responses before or after sending the downstream request.
 
+#### AddRequestHeader GatewayFilter Factory
+
+```kotlin
+fun myRoutes(builder: RouteLocatorBuilder): RouteLocator? = builder.routes()
+        .route { r -> r.path("/get").and().method(HttpMethod.GET)
+        .filters { f -> f.addRequestHeader("Hello", "World") }
+		.uri("http://httpbin.org") }
+```
+
+### Route Predicate Factories
+- After Route Predicate Factory
+```yaml
+predicates:
+- After=2017-01-20T17:42:47.789-07:00[America/Denver]
+```
+
+- Before Route Predicate Factory
+```yaml
+predicates:
+- Before=2017-01-20T17:42:47.789-07:00[America/Denver]
+```
+
+- Between Route Predicate Factory
+```yaml
+predicates:
+- Between=2017-01-20T17:42:47.789-07:00[America/Denver], 2017-01-21T17:42:47.789-07:00[America/Denver]
+```
+
+- Cookie Route Predicate Factory
+```yaml
+predicates:
+- Cookie=chocolate, ch.p
+```
+
+- Header Route Predicate Factory
+```yaml
+predicates:
+- Header=X-Request-Id, \d+
+```
+
+- Host Route Predicate Factory
+```yaml
+predicates:
+- Host=**.somehost.org,**.anotherhost.org
+```
+
+- Method Route Predicate Factory
+```yaml
+predicates:
+- Method=GET
+```
+
+- Path Route Predicate Factory
+```yaml
+predicates:
+- Path=/foo/{segment},/bar/{segment}
+```
+
+- Query Route Predicate Factory
+```yaml
+predicates:
+- Query=baz
+```
+
+- RemoteAddr Route Predicate Factory
+```yaml
+predicates:
+- RemoteAddr=192.168.1.1/24
+```
+
+- Weight Route Predicate Factory
+```yaml
+routes:
+- id: weight_high
+  uri: https://weighthigh.org
+  predicates:
+  - Weight=group1, 8
+- id: weight_low
+  uri: https://weightlow.org
+  predicates:
+  - Weight=group1, 2
+```
+
+### GatewayFilter Factory
+- AddRequestHeader
+- AddRequestParameter
+- AddResponseHeader
+- DedupeResponseHeader
+- MapRequestHeade
+- PrefixPath
+- PreserveHostHeader
+- RequestRateLimiter
+- RedirectTo
+- RemoveHopByHopHeadersFilter
+- RemoveRequestHeader
+- RemoveResponseHeade
+- RemoveRequestParameter
+- RewritePath
+- RewriteLocationResponseHeader
+- RewriteResponseHeader
+- SaveSession
+- SecureHeaders
+- SetPath
+- SetRequestHeader
+- SetResponseHeader
+- SetStatus
+- StripPrefix
+- Retry
+- RequestSize
+- Modify Request Body
+- Modify Response Body
 
 ## Demo
 
