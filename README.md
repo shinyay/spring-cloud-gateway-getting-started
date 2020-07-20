@@ -143,7 +143,7 @@ routes:
 - RedirectTo
 - RemoveHopByHopHeadersFilter
 - RemoveRequestHeader
-- RemoveResponseHeade
+- RemoveResponseHeader
 - RemoveRequestParameter
 - RewritePath
 - RewriteLocationResponseHeader
