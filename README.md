@@ -3,6 +3,9 @@
 Spring Cloud Gateway is an intelligent proxy service, which ransparently centralizes requests in a single entry point and routes them to the proper service.
 
 ## Description
+### Dependencies
+- spring-cloud-starter-gateway
+- spring-cloud-starter-netflix-eureka-client
 
 ### Building Block for Gateway
 
