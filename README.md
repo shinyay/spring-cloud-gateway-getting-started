@@ -7,6 +7,13 @@ Spring Cloud Gateway is an intelligent proxy service, which ransparently central
 - spring-cloud-starter-gateway
 - spring-cloud-starter-netflix-eureka-client
 
+### Related Repository
+- https://github.com/shinyay/spring-cloud-getting-started
+- https://github.com/shinyay/spring-cloud-loadbalancer-gs
+- https://github.com/shinyay/spring-cloud-config-gs
+- https://github.com/shinyay/spring-cloud-eureka-server-gs
+- https://github.com/shinyay/spring-cloud-config-client-gs
+
 ### Enable Service Discovery Client
 There are multiple implementations of "Discovery Service" (eureka, consul, zookeeper). `@EnableDiscoveryClient` lives in spring-cloud-commons and picks the implementation on the classpath.  `@EnableEurekaClient` lives in spring-cloud-netflix and only works for eureka.
 
